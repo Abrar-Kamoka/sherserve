@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptography Web App</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .flex-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cryptography Web App</h1>
+    <div  style="align-content:center; space-around; " class="flex-container">
+    <h4 style="color:white; background-color: darkred ">Encryption Portion</h4>
+    </div>
+    <div class="flex-container">
+
+        <label for="plainText">Plain Text Message:</label>
+        <br />
+        <input type="text" id="plainText" name="plainText">
+    </div>
+
+    <div class="flex-container">
+        <label for="cipher">Coding Mechanism:</label>
+        <select id="cipher" name="cipher">
+            <option value="caesar">Caesar Cipher</option>
+            <option value="morse">Morse Code</option>
+        </select>
+    </div>
+
+    <div class="flex-container">
+        <button id="encryptButton">Encrypt</button>
+        <br />
+    </div>
+
+    <textarea id="resultMessage" rows="5" cols="50"></textarea>
+
+    <div class="flex-container" id="audioContainer" style="display:none">
+        <button id="playAudioButton">Play Audio</button>
+       
+    </div>
+    <div style="align-content:center; space-around;" class="flex-container">
+        <h4 style="color: red; background-color: darkseagreen;">Decryption Portion</h4>
+    </div>
+    <div class="flex-container">
+        <label for="encryptedMessage">Enter Encrypted Message:</label>
+        <br />
+        <input type="text" id="encryptedMessage" name="encryptedMessage">
+    </div>
+
+    <div class="flex-container">
+        <button id="decryptButton">Decrypt</button>
+    </div>
+
+    <div class="flex-container">
+        <label for="outputMessage">Output Message:</label>
+        <br />
+        <textarea id="outputMessage" rows="5" cols="50"></textarea>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
